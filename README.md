@@ -21,3 +21,25 @@ StringBuffer appendTail(StringBuffer sb)
 ```
 
 [代码示例](src/main/java/zhanj/javaregex/App.java)
+
+代码运行结果：
+```
+======== 使用Matcher查找所有匹配的字符串 =========
+text: 'abc123 what 8391 ss'
+
+matcher.group(): '123'
+matcher.start(): 3
+matcher.end(): 6
+matcher.group(): '8391'
+matcher.start(): 12
+matcher.end(): 16
+
+
+======== 使用Matcher查找并替换所有匹配的字符串 =======
+'123' => '*'
+After appendReplacement: 'abc*'
+'8391' => '*'
+After appendReplacement: 'abc* what *'
+Before appendReplacement: 'abc* what *'
+After appendReplacement: 'abc* what * ss'
+```
